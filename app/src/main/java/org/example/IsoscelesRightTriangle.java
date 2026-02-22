@@ -1,12 +1,16 @@
 package org.example;
 
-public class IsoscelesRightTriangle extends RightTriangle {
+public class IsoscelesRightTriangle extends RightTriangle { // No need to implement polygon since RightTriangle already does
     public IsoscelesRightTriangle(double leg) {
-        // Call the constructor for RightTriangle with both legs equal to leg
         super(leg, leg);
     }
 
+    @Override
+    public int numberOfSides() {
+        return 3;
+    }
+
     public double getLeg() {
-        return getLegA(); // Both legs are equal
+        return getLegA();
     }
 }
