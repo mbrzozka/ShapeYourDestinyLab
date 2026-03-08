@@ -31,4 +31,12 @@ public class RectangleTest {
         assertEquals(8, r.getLength()); // Should return 8
         assertEquals(3, r.getWidth()); // Should return 3
     }
+
+    // Tests rectangle type hierarchy: Rectangle -> Parallelogram -> Polygon
+    @Test
+    public void testHierarchy() {
+        Rectangle r = new Rectangle(8, 3);
+        assertTrue(r instanceof Parallelogram);
+        assertTrue(r instanceof Polygon);
+    }
 }

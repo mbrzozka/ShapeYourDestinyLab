@@ -30,4 +30,12 @@ public class SquareTest {
         Square s = new Square(9);
         assertEquals(9, s.getSide()); // Should return 9
     }
+
+    // Tests square type hierarchy: Square -> Rectangle -> Parallelogram -> Polygon
+    @Test
+    public void testHierarchy() {
+        Square s = new Square(9);
+        assertTrue(s instanceof Parallelogram);
+        assertTrue(s instanceof Polygon);
+    }
 }
